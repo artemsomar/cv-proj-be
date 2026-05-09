@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "campus-navigation"
+version = "0.1.0"
+description = "FastAPI backend for university building navigation"
+authors = ["Artem <artem@example.com>"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.0"
+uvicorn = { extras = ["standard"], version = "^0.30.0" }
+sqlalchemy = "^2.0.32"
+psycopg = { extras = ["binary"], version = "^3.2.1" }
+alembic = "^1.13.2"
+pydantic-settings = "^2.4.0"
+greenlet = "^3.0.3"
+asyncpg = "^0.30.0"
+google-genai = "^1.17.0"
+geoalchemy2 = "^0.17.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+mypy = "^1.15.0"
+black = "^24.10.0"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+strict_optional = true
+pretty = true
+show_error_codes = true
+namespace_packages = true
+explicit_package_bases = true
+mypy_path = "."
+exclude = ["alembic/versions/"]
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
