@@ -413,7 +413,7 @@ def apply_transform_to_pose(rvec, tvec, T):
 #     plt.show()
 
 
-def localize_with_ace(query_image_path, model_path, transform_path, transform_2d_path, output_file):
+def localize_with_ace(query_image_path, model_path, transform_path, transform_2d_path, output_file, floor_name="floor_1"):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     print(f"--- Initializing Regressor ---")
@@ -430,7 +430,7 @@ def localize_with_ace(query_image_path, model_path, transform_path, transform_2d
     print(f"--- Loading Encoder: {encoder_path.name} ---")
     regressor.encoder.load_state_dict(torch.load(encoder_path, map_location=device))
 
-    print(f"--- Loading Scene Map: {model_path.name} ---")
+    print(f"--- Loading Scene Map ({floor_name}): {model_path.name} ---")
     state_dict = torch.load(model_path, map_location=device)
 
     fixed_head_state_dict = {}
@@ -524,25 +524,28 @@ def localize_with_ace(query_image_path, model_path, transform_path, transform_2d
                 camera_center[1],
                 transform_2d
             )
-
             floorplan_w = transform_2d.get('output_width', 700)
             floorplan_h = transform_2d.get('output_height', 200)
-
             print(f"\n=== FLOOR PLAN COORDINATES ===")
             print(f"Camera position (bottom-left origin):")
             print(f"  X: {x_floor} (0=left, {floorplan_w}=right)")
             print(f"  Y: {y_floor} (0=bottom, {floorplan_h}=top)")
-
-            with open(output_file, 'w') as f:
-                f.write("# Camera position in floor plan coordinates\n")
-                f.write(f"# Floor plan: bottom-left=(0,0), top-right=({floorplan_w},{floorplan_h})\n")
-                f.write(f"x={x_floor}\n")
-                f.write(f"y={y_floor}\n")
-                f.write(f"inliers={len(inliers)}\n")
-            print(f"Saved to {output_file}")
-            print(f"================================\n")
         else:
-            print("Failed to load 2D transform")
+            print("Warning: Failed to load 2D transform, using raw camera center")
+            x_floor, y_floor = camera_center[0], camera_center[1]
+            floorplan_w = 700
+            floorplan_h = 200
+
+        # Always write output file if localization succeeded
+        with open(output_file, 'w') as f:
+            f.write("# Camera position in floor plan coordinates\n")
+            f.write(f"# Floor plan: bottom-left=(0,0), top-right=({floorplan_w},{floorplan_h})\n")
+            f.write(f"floor={floor_name}\n")
+            f.write(f"x={x_floor}\n")
+            f.write(f"y={y_floor}\n")
+            f.write(f"inliers={len(inliers)}\n")
+        print(f"Saved to {output_file}")
+        print(f"================================\n")
     else:
         print("\nLocalization failed. RANSAC could not find a valid pose from the ACE predictions.")
 
@@ -555,6 +558,7 @@ def parse_args():
     parser.add_argument("--transform", type=str, required=True, help="Path to 3D transform file")
     parser.add_argument("--transform-2d", type=str, required=True, help="Path to 2D transform file")
     parser.add_argument("--output", type=str, default="camera_floorplan_coords.txt", help="Output file for coordinates")
+    parser.add_argument("--floor", type=str, default="floor_1", help="Floor name/identifier (e.g., floor_1, floor_2)")
     return parser.parse_args()
 
 
@@ -565,5 +569,6 @@ if __name__ == "__main__":
         Path(args.model),
         Path(args.transform),
         Path(args.transform_2d),
-        Path(args.output)
+        Path(args.output),
+        floor_name=args.floor
     )
