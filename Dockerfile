@@ -11,6 +11,8 @@ RUN pip install --no-cache-dir poetry
 COPY pyproject.toml README.md alembic.ini ./
 COPY alembic ./alembic
 COPY app ./app
+COPY 3d_localization ./3d_localization
+COPY 3d_loc_artifacts ./3d_loc_artifacts
 
 RUN poetry install --no-interaction --no-ansi
 

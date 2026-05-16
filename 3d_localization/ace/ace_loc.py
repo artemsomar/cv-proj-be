@@ -493,7 +493,7 @@ def localize_with_ace(query_image_path, model_path, transform_path, transform_2d
     )
     print("success:", success, "inliers:", len(inliers) if inliers is not None else 0)
 
-    if success and inliers is not None and len(inliers) > 10:
+    if success and inliers is not None and len(inliers) > 20:
         print(f"\nSUCCESS!")
         print(f"Number of Inliers: {len(inliers)} out of {len(img_pts)}")
         print(f"Rotation Vector (rvec):\n{rvec}")
