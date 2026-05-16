@@ -61,13 +61,16 @@ class LocalizationService:
                 lines = f.readlines()
 
             x, y = 0.0, 0.0
+            inliers = 0
             for line in lines:
                 if line.startswith("x="):
                     x = float(line.split("=")[1].strip().strip("[]"))
                 elif line.startswith("y="):
                     y = float(line.split("=")[1].strip().strip("[]"))
+                elif line.startswith("inliers="):
+                    inliers = int(line.split("=")[1].strip().strip("[]"))
 
-            return LocalizationResponse(x=x, y=y, success=True)
+            return LocalizationResponse(x=x, y=y, success=True, inliers=inliers)
 
         except subprocess.TimeoutExpired:
             return LocalizationResponse(

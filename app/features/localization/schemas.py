@@ -6,3 +6,4 @@ class LocalizationResponse(BaseModel):
     y: float
     success: bool
     message: str = ""
+    inliers: int = 0

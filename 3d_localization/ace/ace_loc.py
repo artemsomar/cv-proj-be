@@ -538,6 +538,7 @@ def localize_with_ace(query_image_path, model_path, transform_path, transform_2d
                 f.write(f"# Floor plan: bottom-left=(0,0), top-right=({floorplan_w},{floorplan_h})\n")
                 f.write(f"x={x_floor}\n")
                 f.write(f"y={y_floor}\n")
+                f.write(f"inliers={len(inliers)}\n")
             print(f"Saved to {output_file}")
             print(f"================================\n")
         else:
