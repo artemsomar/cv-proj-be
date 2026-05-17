@@ -1,4 +1,4 @@
-from sqlalchemy import and_, func, literal, select, update
+from sqlalchemy import and_, delete, func, literal, select, update
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import aliased
@@ -19,6 +19,16 @@ class ImportRepository:
 
     async def get_version(self, *, version_id: int) -> GraphVersion | None:
         return await self.db.get(GraphVersion, version_id)
+
+    async def get_draft_version(self) -> GraphVersion | None:
+        result = await self.db.execute(
+            select(GraphVersion).where(GraphVersion.status == "draft").limit(1)
+        )
+        return result.scalar_one_or_none()
+
+    async def clear_version_data(self, *, version_id: int) -> None:
+        await self.db.execute(delete(NavEdge).where(NavEdge.version_id == version_id))
+        await self.db.execute(delete(NavVertex).where(NavVertex.version_id == version_id))
 
     async def clone_version(self, *, source: GraphVersion, cloned_name: str) -> GraphVersion:
         clone = GraphVersion(name=cloned_name, status="draft")
