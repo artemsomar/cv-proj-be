@@ -37,11 +37,12 @@ class ImportService:
             vertices=[
                 VertexResponse(
                     id=v.id,
+                    name=v.name,
+                    type=v.type,
                     floor=v.floor,
                     x=v.x,
                     y=v.y,
                     snap_radius=v.snap_radius,
-                    metadata=v.props,
                 )
                 for v in vertices
             ],

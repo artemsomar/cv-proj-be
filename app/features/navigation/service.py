@@ -8,6 +8,8 @@ from app.features.navigation.schemas import (
     NavigationRouteRequest,
     NavigationRouteResponse,
     RouteVertex,
+    VertexItem,
+    VerticesListResponse,
 )
 
 
@@ -15,6 +17,11 @@ class NavigationService:
     def __init__(self, repository: NavigationRepository, narrator: AIRouteNarrationService) -> None:
         self.repository = repository
         self.narrator = narrator
+
+    async def list_vertices(self) -> VerticesListResponse:
+        rows = await self.repository.get_rooms()
+        items = [VertexItem(id=r.id, name=r.name, type=r.type) for r in rows]
+        return VerticesListResponse(items=items, total=len(items))
 
     async def build_route(self, payload: NavigationRouteRequest) -> NavigationRouteResponse:
         source_id = await self.repository.get_nearest_vertex_id(
@@ -43,7 +50,6 @@ class NavigationService:
                         "x": round(v.x, 2),
                         "y": round(v.y, 2),
                         "snap_radius": v.snap_radius,
-                        "metadata": v.metadata,
                     }
                     for v in vertices
                 ],
@@ -61,7 +67,6 @@ class NavigationService:
                     x=v.x,
                     y=v.y,
                     snap_radius=v.snap_radius,
-                    metadata=v.metadata,
                 )
                 for v in vertices
             ],
@@ -89,8 +94,6 @@ class NavigationService:
                     "distance": round(distance, 2),
                     "bearing_degrees": round(bearing, 1),
                     "floor_change": floor_change,
-                    "start_metadata": start.metadata,
-                    "end_metadata": end.metadata,
                 }
             )
         return segments

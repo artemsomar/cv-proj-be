@@ -37,16 +37,17 @@ class ImportRepository:
 
         await self.db.execute(
             insert(NavVertex).from_select(
-                ["id", "version_id", "floor", "x", "y", "snap_radius", "geom", "metadata"],
+                ["id", "version_id", "name", "type", "floor", "x", "y", "snap_radius", "geom"],
                 select(
                     NavVertex.id,
                     literal(clone.id),
+                    NavVertex.name,
+                    NavVertex.type,
                     NavVertex.floor,
                     NavVertex.x,
                     NavVertex.y,
                     NavVertex.snap_radius,
                     NavVertex.geom,
-                    NavVertex.props,
                 ).where(NavVertex.version_id == source.id),
             )
         )
@@ -76,12 +77,13 @@ class ImportRepository:
             {
                 "id": item.id,
                 "version_id": version_id,
+                "name": item.name,
+                "type": item.type,
                 "floor": item.floor,
                 "x": item.x,
                 "y": item.y,
                 "snap_radius": item.snap_radius,
                 "geom": func.ST_SetSRID(func.ST_MakePoint(item.x, item.y), 3857),
-                "props": item.metadata,
             }
             for item in vertices
         ]
@@ -89,12 +91,13 @@ class ImportRepository:
         stmt = stmt.on_conflict_do_update(
             index_elements=[NavVertex.version_id, NavVertex.id],
             set_={
+                "name": stmt.excluded.name,
+                "type": stmt.excluded.type,
                 "floor": stmt.excluded.floor,
                 "x": stmt.excluded.x,
                 "y": stmt.excluded.y,
                 "snap_radius": stmt.excluded.snap_radius,
                 "geom": stmt.excluded.geom,
-                NavVertex.props: stmt.excluded.metadata,
             },
         )
         await self.db.execute(stmt)

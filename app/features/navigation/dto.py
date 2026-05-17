@@ -8,4 +8,3 @@ class VertexDTO:
     x: float
     y: float
     snap_radius: float
-    metadata: dict

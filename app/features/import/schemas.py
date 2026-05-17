@@ -3,11 +3,12 @@ from pydantic import BaseModel, Field
 
 class VertexUpsertItem(BaseModel):
     id: int
+    name: str | None = None
+    type: str | None = None
     floor: int = Field(ge=0)
     x: float
     y: float
     snap_radius: float = Field(default=1.0, gt=0)
-    metadata: dict = Field(default_factory=dict)
 
 
 class EdgeUpsertItem(BaseModel):
@@ -21,11 +22,12 @@ class EdgeUpsertItem(BaseModel):
 
 class VertexResponse(BaseModel):
     id: int
+    name: str | None
+    type: str | None
     floor: int
     x: float
     y: float
     snap_radius: float
-    metadata: dict
 
 
 class EdgeResponse(BaseModel):

@@ -25,7 +25,6 @@ class RouteVertex(BaseModel):
     x: float
     y: float
     snap_radius: float
-    metadata: dict
 
 
 class NavigationRouteResponse(BaseModel):
@@ -33,3 +32,14 @@ class NavigationRouteResponse(BaseModel):
     total_cost: float
     vertices: list[RouteVertex]
     llm_instructions: str
+
+
+class VertexItem(BaseModel):
+    id: int
+    name: str | None
+    type: str | None
+
+
+class VerticesListResponse(BaseModel):
+    items: list[VertexItem]
+    total: int
