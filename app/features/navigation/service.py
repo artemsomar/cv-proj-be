@@ -5,6 +5,7 @@ from app.features.ai.service import AIRouteNarrationService
 from app.features.navigation.dto import VertexDTO
 from app.features.navigation.repository import NavigationRepository
 from app.features.navigation.schemas import (
+    NavigationInstructionsResponse,
     NavigationRouteRequest,
     NavigationRouteResponse,
     RouteVertex,
@@ -20,7 +21,7 @@ class NavigationService:
 
     async def list_vertices(self) -> VerticesListResponse:
         rows = await self.repository.get_rooms()
-        items = [VertexItem(id=r.id, name=r.name, type=r.type) for r in rows]
+        items = [VertexItem(id=r.id, name=r.name, type=r.type, floor=r.floor, x=r.x, y=r.y) for r in rows]
         return VerticesListResponse(items=items, total=len(items))
 
     async def build_route(self, payload: NavigationRouteRequest) -> NavigationRouteResponse:
@@ -45,11 +46,11 @@ class NavigationService:
                 total_distance=total_cost,
                 vertices=[
                     {
-                        "id": v.id,
+                        "name": v.name,
+                        "type": v.type,
                         "floor": v.floor,
                         "x": round(v.x, 2),
                         "y": round(v.y, 2),
-                        "snap_radius": v.snap_radius,
                     }
                     for v in vertices
                 ],
@@ -72,6 +73,41 @@ class NavigationService:
             ],
             llm_instructions=instructions,
         )
+
+    async def build_instructions(self, payload: NavigationRouteRequest) -> NavigationInstructionsResponse:
+        source_id = await self.repository.get_nearest_vertex_id(
+            x=payload.current_position.x,
+            y=payload.current_position.y,
+            floor=payload.current_position.floor,
+        )
+        target_id = await self.repository.get_nearest_vertex_id(
+            x=payload.destination.x,
+            y=payload.destination.y,
+            floor=payload.destination.floor,
+        )
+        path_vertex_ids = await self.repository.get_route_vertex_ids(
+            source_id=source_id, target_id=target_id
+        )
+        vertices = await self.repository.get_vertices_by_ids(path_vertex_ids)
+        total_cost = self.repository.estimate_total_cost(vertices)
+        steps = await self.narrator.build_route_instructions_list(
+            RouteNarrationInput(
+                heading_degrees=payload.heading_degrees,
+                total_distance=total_cost,
+                vertices=[
+                    {
+                        "name": v.name,
+                        "type": v.type,
+                        "floor": v.floor,
+                        "x": round(v.x, 2),
+                        "y": round(v.y, 2),
+                    }
+                    for v in vertices
+                ],
+                segments=self._build_route_segments(vertices),
+            )
+        )
+        return NavigationInstructionsResponse(instructions=steps)
 
     @staticmethod
     def _build_route_segments(vertices: list[VertexDTO]) -> list[dict]:

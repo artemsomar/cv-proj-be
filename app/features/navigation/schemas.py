@@ -34,10 +34,17 @@ class NavigationRouteResponse(BaseModel):
     llm_instructions: str
 
 
+class NavigationInstructionsResponse(BaseModel):
+    instructions: list[str]
+
+
 class VertexItem(BaseModel):
     id: int
     name: str | None
     type: str | None
+    floor: int
+    x: float
+    y: float
 
 
 class VerticesListResponse(BaseModel):

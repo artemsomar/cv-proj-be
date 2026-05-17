@@ -61,6 +61,8 @@ class NavigationRepository:
         by_id = {
             int(row.id): VertexDTO(
                 id=int(row.id),
+                name=row.name,
+                type=row.type,
                 floor=int(row.floor),
                 x=float(row.x),
                 y=float(row.y),
