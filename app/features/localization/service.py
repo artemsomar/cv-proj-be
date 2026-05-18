@@ -21,11 +21,11 @@ FLOOR_MODELS = {
         "transform_2d_path": BASE_DIR / "3d_loc_artifacts" / "floor_1_model" / "transform_2d.txt",
     },
     # Add more floors here as they become available
-    # "floor_2": {
-    #     "model_path": BASE_DIR / "3d_loc_artifacts" / "floor_2_model" / "model_ff_stairs_v2_e_12.pt",
-    #     "transform_path": BASE_DIR / "3d_loc_artifacts" / "floor_2_model" / "transform.txt",
-    #     "transform_2d_path": BASE_DIR / "3d_loc_artifacts" / "floor_2_model" / "transform_2d.txt",
-    # },
+    "floor_2": {
+        "model_path": BASE_DIR / "3d_loc_artifacts" / "floor_2_model" / "model_sf_stairs.pt",
+        "transform_path": BASE_DIR / "3d_loc_artifacts" / "floor_2_model" / "transform.txt",
+        "transform_2d_path": BASE_DIR / "3d_loc_artifacts" / "floor_2_model" / "transform_2d.txt",
+    },
 }
 
 OUTPUT_FILE = BASE_DIR / "3d_localization" / "ace" / "camera_floorplan_coords.txt"
