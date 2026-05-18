@@ -1,4 +1,4 @@
-from sqlalchemy import and_, func, literal, select, update
+from sqlalchemy import and_, delete, func, literal, select, update
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import aliased
@@ -20,6 +20,16 @@ class ImportRepository:
     async def get_version(self, *, version_id: int) -> GraphVersion | None:
         return await self.db.get(GraphVersion, version_id)
 
+    async def get_draft_version(self) -> GraphVersion | None:
+        result = await self.db.execute(
+            select(GraphVersion).where(GraphVersion.status == "draft").limit(1)
+        )
+        return result.scalar_one_or_none()
+
+    async def clear_version_data(self, *, version_id: int) -> None:
+        await self.db.execute(delete(NavEdge).where(NavEdge.version_id == version_id))
+        await self.db.execute(delete(NavVertex).where(NavVertex.version_id == version_id))
+
     async def clone_version(self, *, source: GraphVersion, cloned_name: str) -> GraphVersion:
         clone = GraphVersion(name=cloned_name, status="draft")
         self.db.add(clone)
@@ -27,16 +37,17 @@ class ImportRepository:
 
         await self.db.execute(
             insert(NavVertex).from_select(
-                ["id", "version_id", "floor", "x", "y", "snap_radius", "geom", "metadata"],
+                ["id", "version_id", "name", "type", "floor", "x", "y", "snap_radius", "geom"],
                 select(
                     NavVertex.id,
                     literal(clone.id),
+                    NavVertex.name,
+                    NavVertex.type,
                     NavVertex.floor,
                     NavVertex.x,
                     NavVertex.y,
                     NavVertex.snap_radius,
                     NavVertex.geom,
-                    NavVertex.props,
                 ).where(NavVertex.version_id == source.id),
             )
         )
@@ -66,12 +77,13 @@ class ImportRepository:
             {
                 "id": item.id,
                 "version_id": version_id,
+                "name": item.name,
+                "type": item.type,
                 "floor": item.floor,
                 "x": item.x,
                 "y": item.y,
                 "snap_radius": item.snap_radius,
                 "geom": func.ST_SetSRID(func.ST_MakePoint(item.x, item.y), 3857),
-                "props": item.metadata,
             }
             for item in vertices
         ]
@@ -79,12 +91,13 @@ class ImportRepository:
         stmt = stmt.on_conflict_do_update(
             index_elements=[NavVertex.version_id, NavVertex.id],
             set_={
+                "name": stmt.excluded.name,
+                "type": stmt.excluded.type,
                 "floor": stmt.excluded.floor,
                 "x": stmt.excluded.x,
                 "y": stmt.excluded.y,
                 "snap_radius": stmt.excluded.snap_radius,
                 "geom": stmt.excluded.geom,
-                NavVertex.props: stmt.excluded.metadata,
             },
         )
         await self.db.execute(stmt)

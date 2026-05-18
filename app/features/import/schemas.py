@@ -1,23 +1,14 @@
 from pydantic import BaseModel, Field
 
 
-class GraphVersionCreateRequest(BaseModel):
-    name: str = Field(min_length=1, max_length=128)
-
-
-class GraphVersionResponse(BaseModel):
-    id: int
-    name: str
-    status: str
-
-
 class VertexUpsertItem(BaseModel):
     id: int
+    name: str | None = None
+    type: str | None = None
     floor: int = Field(ge=0)
     x: float
     y: float
     snap_radius: float = Field(default=1.0, gt=0)
-    metadata: dict = Field(default_factory=dict)
 
 
 class EdgeUpsertItem(BaseModel):
@@ -29,21 +20,14 @@ class EdgeUpsertItem(BaseModel):
     corridor_width: float = Field(default=1.0, gt=0)
 
 
-class BatchUpsertVerticesRequest(BaseModel):
-    vertices: list[VertexUpsertItem]
-
-
-class BatchUpsertEdgesRequest(BaseModel):
-    edges: list[EdgeUpsertItem]
-
-
 class VertexResponse(BaseModel):
     id: int
+    name: str | None
+    type: str | None
     floor: int
     x: float
     y: float
     snap_radius: float
-    metadata: dict
 
 
 class EdgeResponse(BaseModel):
@@ -55,19 +39,20 @@ class EdgeResponse(BaseModel):
     corridor_width: float
 
 
-class BatchVerticesResponse(BaseModel):
+class BatchUpsertGraphRequest(BaseModel):
+    vertices: list[VertexUpsertItem]
+    edges: list[EdgeUpsertItem]
+
+
+class BatchGraphResponse(BaseModel):
     vertices: list[VertexResponse]
-
-
-class BatchEdgesResponse(BaseModel):
     edges: list[EdgeResponse]
-
-
-class PublishResponse(BaseModel):
-    version_id: int
-    status: str
 
 
 class ValidateResponse(BaseModel):
     is_valid: bool
     errors: list[str]
+
+
+class PublishResponse(BaseModel):
+    status: str

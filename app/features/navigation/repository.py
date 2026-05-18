@@ -61,15 +61,25 @@ class NavigationRepository:
         by_id = {
             int(row.id): VertexDTO(
                 id=int(row.id),
+                name=row.name,
+                type=row.type,
                 floor=int(row.floor),
                 x=float(row.x),
                 y=float(row.y),
                 snap_radius=float(row.snap_radius),
-                metadata=dict(row.props or {}),
             )
             for row in rows
         }
         return [by_id[vertex_id] for vertex_id in vertex_ids if vertex_id in by_id]
+
+    async def get_rooms(self) -> list[NavVertex]:
+        version_id = await self.get_published_version_id()
+        query = (
+            select(NavVertex)
+            .where(NavVertex.version_id == version_id, NavVertex.type == "room")
+            .order_by(NavVertex.id)
+        )
+        return list((await self.db.execute(query)).scalars().all())
 
     @staticmethod
     def estimate_total_cost(vertices: list[VertexDTO]) -> float:
