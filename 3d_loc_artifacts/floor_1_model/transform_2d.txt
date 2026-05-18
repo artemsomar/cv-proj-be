@@ -1,0 +1,15 @@
+# 2D transform: 3D world -> floor plan image (top-left origin)
+#
+# Transform parameters (tuned on original image):
+scale_x=71.28571429
+scale_y=70.94285714
+rotation_deg=115.20000000
+tx=2687.14000000
+ty=498.88571429
+original_image_width=3277
+original_image_height=919
+output_width=700
+output_height=200
+#
+# 3D model origin (0,0) projects to (in original image space):
+# X=2687.14000000, Y=498.88571429
