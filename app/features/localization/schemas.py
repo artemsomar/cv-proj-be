@@ -8,3 +8,8 @@ class LocalizationResponse(BaseModel):
     message: str = ""
     inliers: int = 0
     floor: str = "floor_1"
+
+
+class MultiFloorLocalizationResponse(BaseModel):
+    current: LocalizationResponse
+    results: list[LocalizationResponse]
