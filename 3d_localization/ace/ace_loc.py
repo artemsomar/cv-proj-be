@@ -1,6 +1,13 @@
 import torch
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageOps
+
+# Pillow changed resampling constant locations in newer versions.
+# Resolve a compatible LANCZOS constant for img.resize()
+try:
+    RESAMPLE_LANCZOS = Image.Resampling.LANCZOS  # Pillow >=9.1
+except Exception:
+    RESAMPLE_LANCZOS = Image.LANCZOS  # older Pillow
 from pathlib import Path
 import torchvision.transforms.functional as TF
 
@@ -441,14 +448,17 @@ def localize_with_ace(query_image_path, model_path, transform_path, transform_2d
     regressor = regressor.to(device)
     regressor.eval()
 
-    img = Image.open(query_image_path).convert('L')
-    img = img.rotate(-90, expand=True)
+    # Load image and apply EXIF orientation (if present) so the image
+    # is oriented as the photographer intended. Then convert to L.
+    img = Image.open(query_image_path)
+    img = ImageOps.exif_transpose(img)
+    img = img.convert('L')
 
     orig_w, orig_h = img.size
 
     target_h = 480
     target_w = int(orig_w * (target_h / orig_h))
-    img_resized = img.resize((target_w, target_h), Image.LANCZOS)
+    img_resized = img.resize((target_w, target_h), RESAMPLE_LANCZOS)
 
     input_tensor = TF.to_tensor(img_resized).unsqueeze(0).to(device)
 
@@ -491,9 +501,10 @@ def localize_with_ace(query_image_path, model_path, transform_path, transform_2d
         confidence=0.9,
         flags=cv2.SOLVEPNP_SQPNP
     )
-    print("success:", success, "inliers:", len(inliers) if inliers is not None else 0)
+    num_inliers = len(inliers) if inliers is not None else 0
+    print("success:", success, "inliers:", num_inliers)
 
-    if success and inliers is not None and len(inliers) > 20:
+    if success and inliers is not None and num_inliers > 20:
         print(f"\nSUCCESS!")
         print(f"Number of Inliers: {len(inliers)} out of {len(img_pts)}")
         print(f"Rotation Vector (rvec):\n{rvec}")

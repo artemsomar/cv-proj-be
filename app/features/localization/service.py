@@ -1,7 +1,13 @@
 import io
 import torch
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageOps
+
+# Pillow resampling compatibility
+try:
+    RESAMPLE_LANCZOS = Image.Resampling.LANCZOS
+except Exception:
+    RESAMPLE_LANCZOS = Image.LANCZOS
 from pathlib import Path
 
 from fastapi import UploadFile
@@ -84,13 +90,17 @@ class FloorModel:
 
     def localize(self, image_bytes: bytes) -> LocalizationResponse:
         try:
-            img = Image.open(io.BytesIO(image_bytes)).convert('L')
-            img = img.rotate(-90, expand=True)
+            # Load image and apply EXIF orientation if present so the
+            # image matches the photographer's intended orientation.
+            img = Image.open(io.BytesIO(image_bytes))
+            img = ImageOps.exif_transpose(img)
+            img = img.convert('L')
+            print("img size:", img.size)
 
             orig_w, orig_h = img.size
             target_h = 480
             target_w = int(orig_w * (target_h / orig_h))
-            img_resized = img.resize((target_w, target_h), Image.LANCZOS)
+            img_resized = img.resize((target_w, target_h), RESAMPLE_LANCZOS)
 
             input_tensor = TF.to_tensor(img_resized).unsqueeze(0).to(self.device)
             mean = torch.tensor([0.449]).view(1, 1, 1, 1).to(self.device)
