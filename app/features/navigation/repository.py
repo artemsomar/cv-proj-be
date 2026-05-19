@@ -72,6 +72,52 @@ class NavigationRepository:
         }
         return [by_id[vertex_id] for vertex_id in vertex_ids if vertex_id in by_id]
 
+    async def get_nearby_rooms_for_segment(
+        self,
+        *,
+        ax: float,
+        ay: float,
+        bx: float,
+        by: float,
+        floor: int,
+        exclude_ids: list[int],
+        radius: float = 10.0,
+    ) -> list[tuple[VertexDTO, str]]:
+        version_id = await self.get_published_version_id()
+        line = func.ST_SetSRID(
+            func.ST_MakeLine(func.ST_MakePoint(ax, ay), func.ST_MakePoint(bx, by)),
+            3857,
+        )
+        filters = [
+            NavVertex.version_id == version_id,
+            NavVertex.floor == floor,
+            NavVertex.type.in_(["room", "exit"]),
+            func.ST_DWithin(NavVertex.geom, line, radius),
+        ]
+        if exclude_ids:
+            filters.append(NavVertex.id.not_in(exclude_ids))
+        rows = (await self.db.execute(select(NavVertex).where(*filters))).scalars().all()
+
+        dx = bx - ax
+        dy = by - ay
+        result: list[tuple[VertexDTO, str]] = []
+        for row in rows:
+            cross = dx * (float(row.y) - ay) - dy * (float(row.x) - ax)
+            side = "left" if cross > 0 else "right"
+            result.append((
+                VertexDTO(
+                    id=int(row.id),
+                    name=row.name,
+                    type=row.type,
+                    floor=int(row.floor),
+                    x=float(row.x),
+                    y=float(row.y),
+                    snap_radius=float(row.snap_radius),
+                ),
+                side,
+            ))
+        return result
+
     async def get_rooms(self) -> list[NavVertex]:
         version_id = await self.get_published_version_id()
         query = (
