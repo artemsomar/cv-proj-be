@@ -1,3 +1,5 @@
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 
@@ -27,15 +29,34 @@ class RouteVertex(BaseModel):
     snap_radius: float
 
 
+class RouteSegment(BaseModel):
+    step: int
+    from_vertex_id: int
+    to_vertex_id: int
+    from_floor: int
+    to_floor: int
+    distance: float
+    bearing_degrees: float
+    floor_change: int
+    direction: Literal["straight", "left", "right", "back", "stairs_up", "stairs_down"]
+
+
 class NavigationRouteResponse(BaseModel):
     path_vertex_ids: list[int]
     total_cost: float
     vertices: list[RouteVertex]
+    segments: list[RouteSegment]
     llm_instructions: str
 
 
+class InstructionStep(BaseModel):
+    text: str
+    direction: Literal["straight", "left", "right", "back", "stairs_up", "stairs_down"]
+
+
 class NavigationInstructionsResponse(BaseModel):
-    instructions: list[str]
+    instructions: list[InstructionStep]
+    segments: list[RouteSegment]
 
 
 class VertexItem(BaseModel):
