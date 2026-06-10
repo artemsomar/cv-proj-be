@@ -10,3 +10,9 @@ class VertexDTO:
     x: float
     y: float
     snap_radius: float
+
+
+@dataclass(slots=True)
+class NearestVertexResult:
+    vertex: VertexDTO
+    distance: float

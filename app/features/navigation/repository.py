@@ -1,8 +1,8 @@
-from sqlalchemy import Select, func, select
+from sqlalchemy import Select, case, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.features.navigation.dto import VertexDTO
-from app.features.navigation.models import GraphVersion, NavVertex
+from app.features.navigation.dto import VertexDTO, NearestVertexResult
+from app.features.navigation.models import GraphVersion, NavEdge, NavVertex
 
 
 class NavigationRepository:
@@ -91,7 +91,7 @@ class NavigationRepository:
         filters = [
             NavVertex.version_id == version_id,
             NavVertex.floor == floor,
-            NavVertex.type.in_(["room", "exit"]),
+            NavVertex.type.in_(["room", "exit", "stairs"]),
             func.ST_DWithin(NavVertex.geom, line, radius),
         ]
         if exclude_ids:
@@ -117,6 +117,79 @@ class NavigationRepository:
                 side,
             ))
         return result
+
+    async def _resolve_exit_to_room(self, *, version_id: int, exit_id: int) -> NavVertex | None:
+        neighbor_ids = (
+            select(NavEdge.target.label("neighbor_id"))
+            .where(NavEdge.version_id == version_id, NavEdge.source == exit_id)
+            .union_all(
+                select(NavEdge.source.label("neighbor_id"))
+                .where(NavEdge.version_id == version_id, NavEdge.target == exit_id)
+            )
+        ).subquery()
+        return (
+            await self.db.execute(
+                select(NavVertex).where(
+                    NavVertex.version_id == version_id,
+                    NavVertex.id.in_(select(neighbor_ids.c.neighbor_id)),
+                    NavVertex.type == "room",
+                ).limit(1)
+            )
+        ).scalar_one_or_none()
+
+    async def get_nearest_vertex(self, *, x: float, y: float, floor: int) -> NearestVertexResult:
+        version_id = await self.get_published_version_id()
+        point = func.ST_SetSRID(func.ST_MakePoint(x, y), 3857)
+        distance_expr = func.ST_Distance(NavVertex.geom, point)
+        distance_col = distance_expr.label("distance")
+        in_snap = case((distance_expr <= NavVertex.snap_radius, 1), else_=0)
+        query: Select = (
+            select(NavVertex, distance_col)
+            .where(NavVertex.version_id == version_id, NavVertex.floor == floor)
+            .order_by(in_snap.desc(), distance_col)
+            .limit(1)
+        )
+        row = (await self.db.execute(query)).one_or_none()
+        if row is None:
+            raise ValueError(f"No vertices found on floor={floor}")
+        vertex, distance = row
+
+        if vertex.type == "exit":
+            room = await self._resolve_exit_to_room(version_id=version_id, exit_id=int(vertex.id))
+            if room is not None:
+                vertex = room
+                distance = float(
+                    (await self.db.execute(
+                        select(func.ST_Distance(NavVertex.geom, point))
+                        .where(NavVertex.version_id == version_id, NavVertex.id == room.id)
+                    )).scalar()
+                )
+            else:
+                fallback_row = (await self.db.execute(
+                    select(NavVertex, distance_expr.label("distance"))
+                    .where(
+                        NavVertex.version_id == version_id,
+                        NavVertex.floor == floor,
+                        NavVertex.type != "exit",
+                    )
+                    .order_by(distance_expr)
+                    .limit(1)
+                )).one_or_none()
+                if fallback_row is not None:
+                    vertex, distance = fallback_row
+
+        return NearestVertexResult(
+            vertex=VertexDTO(
+                id=int(vertex.id),
+                name=vertex.name,
+                type=vertex.type,
+                floor=int(vertex.floor),
+                x=float(vertex.x),
+                y=float(vertex.y),
+                snap_radius=float(vertex.snap_radius),
+            ),
+            distance=float(distance),
+        )
 
     async def get_rooms(self) -> list[NavVertex]:
         version_id = await self.get_published_version_id()

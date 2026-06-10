@@ -5,11 +5,24 @@ from app.features.navigation.schemas import (
     NavigationInstructionsResponse,
     NavigationRouteRequest,
     NavigationRouteResponse,
+    NearestVertexRequest,
+    NearestVertexResponse,
     VerticesListResponse,
 )
 from app.features.navigation.service import NavigationService
 
 router = APIRouter(prefix="/navigation", tags=["navigation"])
+
+
+@router.post("/nearest", response_model=NearestVertexResponse, status_code=status.HTTP_200_OK)
+async def get_nearest_vertex(
+    payload: NearestVertexRequest,
+    service: NavigationService = Depends(get_navigation_service),
+) -> NearestVertexResponse:
+    try:
+        return await service.find_nearest_vertex(payload)
+    except ValueError as error:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(error)) from error
 
 
 @router.get("/rooms", response_model=VerticesListResponse, status_code=status.HTTP_200_OK)

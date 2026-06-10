@@ -6,13 +6,13 @@ from pydantic import BaseModel, Field
 class UserPosition(BaseModel):
     x: float
     y: float
-    floor: int = Field(ge=0)
+    floor: int = Field(ge=1)
 
 
 class Destination(BaseModel):
     x: float
     y: float
-    floor: int = Field(ge=0)
+    floor: int = Field(ge=1)
 
 
 class NavigationRouteRequest(BaseModel):
@@ -71,3 +71,20 @@ class VertexItem(BaseModel):
 class VerticesListResponse(BaseModel):
     items: list[VertexItem]
     total: int
+
+
+class NearestVertexRequest(BaseModel):
+    x: float
+    y: float
+    floor: int = Field(ge=1)
+
+
+class NearestVertexResponse(BaseModel):
+    id: int
+    name: str | None
+    type: str | None
+    floor: int
+    x: float
+    y: float
+    snap_radius: float
+    distance: float
