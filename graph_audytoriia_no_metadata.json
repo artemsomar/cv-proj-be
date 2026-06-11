@@ -1,0 +1,3103 @@
+{
+  "vertices": [
+    {
+      "id": 0,
+      "floor": 0,
+      "x": 475,
+      "y": 6,
+      "snap_radius": 8,
+      "name": "Головний вихід",
+      "type": "exit"
+    },
+    {
+      "id": 1,
+      "floor": 0,
+      "x": 475,
+      "y": 60,
+      "snap_radius": 18,
+      "name": "Головний хол",
+      "type": "corridor"
+    },
+    {
+      "id": 2,
+      "floor": 0,
+      "x": 475,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя головного коридору",
+      "type": "junction"
+    },
+    {
+      "id": 3,
+      "floor": 0,
+      "x": 475,
+      "y": 130,
+      "snap_radius": 15,
+      "name": "Головні сходи",
+      "type": "stairs"
+    },
+    {
+      "id": 4,
+      "floor": 0,
+      "x": 441,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 100 та чоловічого туалету",
+      "type": "junction"
+    },
+    {
+      "id": 5,
+      "floor": 0,
+      "x": 441,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері чоловічого туалету",
+      "type": "exit"
+    },
+    {
+      "id": 6,
+      "floor": 0,
+      "x": 441,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 100",
+      "type": "exit"
+    },
+    {
+      "id": 7,
+      "floor": 0,
+      "x": 404,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 101",
+      "type": "junction"
+    },
+    {
+      "id": 8,
+      "floor": 0,
+      "x": 441,
+      "y": 120,
+      "snap_radius": 8,
+      "name": "Чоловічий туалет",
+      "type": "room"
+    },
+    {
+      "id": 9,
+      "floor": 0,
+      "x": 404,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 101",
+      "type": "exit"
+    },
+    {
+      "id": 10,
+      "floor": 0,
+      "x": 441,
+      "y": 65,
+      "snap_radius": 10,
+      "name": "Аудиторія 100",
+      "type": "room"
+    },
+    {
+      "id": 11,
+      "floor": 0,
+      "x": 404,
+      "y": 65,
+      "snap_radius": 10,
+      "name": "Аудиторія 101",
+      "type": "room"
+    },
+    {
+      "id": 12,
+      "floor": 0,
+      "x": 384,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 102 і 118",
+      "type": "junction"
+    },
+    {
+      "id": 13,
+      "floor": 0,
+      "x": 384,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 102",
+      "type": "exit"
+    },
+    {
+      "id": 14,
+      "floor": 0,
+      "x": 384,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 118",
+      "type": "exit"
+    },
+    {
+      "id": 15,
+      "floor": 0,
+      "x": 379,
+      "y": 68,
+      "snap_radius": 12,
+      "name": "Аудиторія 102",
+      "type": "room"
+    },
+    {
+      "id": 16,
+      "floor": 0,
+      "x": 388,
+      "y": 119,
+      "snap_radius": 10,
+      "name": "Аудиторія 118",
+      "type": "room"
+    },
+    {
+      "id": 17,
+      "floor": 0,
+      "x": 345,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 103",
+      "type": "junction"
+    },
+    {
+      "id": 18,
+      "floor": 0,
+      "x": 345,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 103",
+      "type": "exit"
+    },
+    {
+      "id": 19,
+      "floor": 0,
+      "x": 345,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 117",
+      "type": "exit"
+    },
+    {
+      "id": 20,
+      "floor": 0,
+      "x": 350,
+      "y": 66,
+      "snap_radius": 12,
+      "name": "Аудиторія 103",
+      "type": "room"
+    },
+    {
+      "id": 21,
+      "floor": 0,
+      "x": 365,
+      "y": 120,
+      "snap_radius": 10,
+      "name": "Аудиторія 117",
+      "type": "room"
+    },
+    {
+      "id": 22,
+      "floor": 0,
+      "x": 331,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 104 і 117",
+      "type": "junction"
+    },
+    {
+      "id": 23,
+      "floor": 0,
+      "x": 331,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 104",
+      "type": "exit"
+    },
+    {
+      "id": 24,
+      "floor": 0,
+      "x": 331,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Другі двері аудиторії 117",
+      "type": "exit"
+    },
+    {
+      "id": 25,
+      "floor": 0,
+      "x": 324,
+      "y": 66,
+      "snap_radius": 12,
+      "name": "Аудиторія 104",
+      "type": "room"
+    },
+    {
+      "id": 26,
+      "floor": 0,
+      "x": 331,
+      "y": 120,
+      "snap_radius": 16,
+      "name": "Аудиторія 117",
+      "type": "room"
+    },
+    {
+      "id": 27,
+      "floor": 0,
+      "x": 287,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 105",
+      "type": "junction"
+    },
+    {
+      "id": 28,
+      "floor": 0,
+      "x": 287,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 105",
+      "type": "exit"
+    },
+    {
+      "id": 30,
+      "floor": 0,
+      "x": 291,
+      "y": 66,
+      "snap_radius": 16,
+      "name": "Аудиторія 105",
+      "type": "room"
+    },
+    {
+      "id": 31,
+      "floor": 0,
+      "x": 286,
+      "y": 120,
+      "snap_radius": 14,
+      "name": "Аудиторія 117а",
+      "type": "room"
+    },
+    {
+      "id": 32,
+      "floor": 0,
+      "x": 220,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 106 і 116",
+      "type": "junction"
+    },
+    {
+      "id": 33,
+      "floor": 0,
+      "x": 220,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 106",
+      "type": "exit"
+    },
+    {
+      "id": 34,
+      "floor": 0,
+      "x": 220,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 116",
+      "type": "exit"
+    },
+    {
+      "id": 35,
+      "floor": 0,
+      "x": 230,
+      "y": 56,
+      "snap_radius": 18,
+      "name": "Аудиторія 106",
+      "type": "room"
+    },
+    {
+      "id": 36,
+      "floor": 0,
+      "x": 240,
+      "y": 120,
+      "snap_radius": 16,
+      "name": "Аудиторія 116",
+      "type": "room"
+    },
+    {
+      "id": 37,
+      "floor": 0,
+      "x": 198,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 113, 114 і 115",
+      "type": "junction"
+    },
+    {
+      "id": 41,
+      "floor": 0,
+      "x": 198,
+      "y": 106,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 115 та туалету",
+      "type": "junction"
+    },
+    {
+      "id": 42,
+      "floor": 0,
+      "x": 155,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 108а",
+      "type": "junction"
+    },
+    {
+      "id": 43,
+      "floor": 0,
+      "x": 155,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 108а",
+      "type": "exit"
+    },
+    {
+      "id": 44,
+      "floor": 0,
+      "x": 155,
+      "y": 56,
+      "snap_radius": 12,
+      "name": "Аудиторія 108а",
+      "type": "room"
+    },
+    {
+      "id": 45,
+      "floor": 0,
+      "x": 112,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 108б",
+      "type": "junction"
+    },
+    {
+      "id": 46,
+      "floor": 0,
+      "x": 112,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 108б",
+      "type": "exit"
+    },
+    {
+      "id": 49,
+      "floor": 0,
+      "x": 122,
+      "y": 50,
+      "snap_radius": 17,
+      "name": "Аудиторія 108б",
+      "type": "room"
+    },
+    {
+      "id": 50,
+      "floor": 0,
+      "x": 168,
+      "y": 175,
+      "snap_radius": 12,
+      "name": "Аудиторія 114",
+      "type": "room"
+    },
+    {
+      "id": 51,
+      "floor": 0,
+      "x": 198,
+      "y": 150,
+      "snap_radius": 6,
+      "name": "Аудиторія 115",
+      "type": "room"
+    },
+    {
+      "id": 52,
+      "floor": 0,
+      "x": 93,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля західних сходів",
+      "type": "junction"
+    },
+    {
+      "id": 54,
+      "floor": 0,
+      "x": 62,
+      "y": 56,
+      "snap_radius": 17,
+      "name": "Аудиторія 68",
+      "type": "room"
+    },
+    {
+      "id": 55,
+      "floor": 0,
+      "x": 93,
+      "y": 124,
+      "snap_radius": 12,
+      "name": "Західні сходи",
+      "type": "stairs"
+    },
+    {
+      "id": 56,
+      "floor": 0,
+      "x": 52,
+      "y": 92,
+      "snap_radius": 8,
+      "name": "Перехрестя біля аудиторії 68",
+      "type": "junction"
+    },
+    {
+      "id": 57,
+      "floor": 0,
+      "x": 512,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 119",
+      "type": "junction"
+    },
+    {
+      "id": 58,
+      "floor": 0,
+      "x": 512,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 119",
+      "type": "exit"
+    },
+    {
+      "id": 59,
+      "floor": 0,
+      "x": 512,
+      "y": 122,
+      "snap_radius": 12,
+      "name": "Аудиторія 119",
+      "type": "room"
+    },
+    {
+      "id": 60,
+      "floor": 0,
+      "x": 542,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 120",
+      "type": "junction"
+    },
+    {
+      "id": 61,
+      "floor": 0,
+      "x": 542,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 120",
+      "type": "exit"
+    },
+    {
+      "id": 62,
+      "floor": 0,
+      "x": 542,
+      "y": 122,
+      "snap_radius": 12,
+      "name": "Аудиторія 120",
+      "type": "room"
+    },
+    {
+      "id": 63,
+      "floor": 0,
+      "x": 571,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 121 і 126",
+      "type": "junction"
+    },
+    {
+      "id": 64,
+      "floor": 0,
+      "x": 571,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 121",
+      "type": "exit"
+    },
+    {
+      "id": 65,
+      "floor": 0,
+      "x": 571,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 126",
+      "type": "exit"
+    },
+    {
+      "id": 66,
+      "floor": 0,
+      "x": 571,
+      "y": 122,
+      "snap_radius": 12,
+      "name": "Аудиторія 121",
+      "type": "room"
+    },
+    {
+      "id": 67,
+      "floor": 0,
+      "x": 571,
+      "y": 49,
+      "snap_radius": 18,
+      "name": "Аудиторія 126",
+      "type": "room"
+    },
+    {
+      "id": 68,
+      "floor": 0,
+      "x": 598,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 122",
+      "type": "junction"
+    },
+    {
+      "id": 69,
+      "floor": 0,
+      "x": 598,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 122",
+      "type": "exit"
+    },
+    {
+      "id": 70,
+      "floor": 0,
+      "x": 610,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 125",
+      "type": "exit"
+    },
+    {
+      "id": 71,
+      "floor": 0,
+      "x": 598,
+      "y": 122,
+      "snap_radius": 8,
+      "name": "Аудиторія 122",
+      "type": "room"
+    },
+    {
+      "id": 72,
+      "floor": 0,
+      "x": 616,
+      "y": 57,
+      "snap_radius": 18,
+      "name": "Аудиторія 125",
+      "type": "room"
+    },
+    {
+      "id": 73,
+      "floor": 0,
+      "x": 665,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 124",
+      "type": "junction"
+    },
+    {
+      "id": 74,
+      "floor": 0,
+      "x": 665,
+      "y": 84,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 124",
+      "type": "exit"
+    },
+    {
+      "id": 75,
+      "floor": 0,
+      "x": 665,
+      "y": 62,
+      "snap_radius": 15,
+      "name": "Аудиторія 124",
+      "type": "room"
+    },
+    {
+      "id": 76,
+      "floor": 0,
+      "x": 622,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 123",
+      "type": "junction"
+    },
+    {
+      "id": 77,
+      "floor": 0,
+      "x": 622,
+      "y": 100,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 123а",
+      "type": "exit"
+    },
+    {
+      "id": 78,
+      "floor": 0,
+      "x": 623,
+      "y": 114,
+      "snap_radius": 10,
+      "name": "Перехрестя між аудиторіями 123а і 123б",
+      "type": "junction"
+    },
+    {
+      "id": 81,
+      "floor": 0,
+      "x": 670,
+      "y": 120,
+      "snap_radius": 13,
+      "name": "Аудиторія 123б",
+      "type": "room"
+    },
+    {
+      "id": 82,
+      "floor": 0,
+      "x": 515,
+      "y": 75,
+      "snap_radius": 8,
+      "name": "Перехрестя біля виходу з аудиторії 127",
+      "type": "junction"
+    },
+    {
+      "id": 83,
+      "floor": 0,
+      "x": 535,
+      "y": 75,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 127 до коридору",
+      "type": "exit"
+    },
+    {
+      "id": 84,
+      "floor": 0,
+      "x": 515,
+      "y": 46,
+      "snap_radius": 13,
+      "name": "Аудиторія 127",
+      "type": "room"
+    },
+    {
+      "id": 85,
+      "floor": 0,
+      "x": 571,
+      "y": 75,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 126 і 127",
+      "type": "junction"
+    },
+    {
+      "id": 86,
+      "floor": 0,
+      "x": 610,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 125",
+      "type": "junction"
+    },
+    {
+      "id": 87,
+      "floor": 0,
+      "x": 628,
+      "y": 138,
+      "snap_radius": 12,
+      "name": "Аудиторія 123а",
+      "type": "room"
+    },
+    {
+      "id": 88,
+      "floor": 0,
+      "x": 251,
+      "y": 92,
+      "snap_radius": 6,
+      "name": "Коридор біля західних сходів",
+      "type": "corridor"
+    },
+    {
+      "id": 89,
+      "floor": 0,
+      "x": 208,
+      "y": 92,
+      "snap_radius": 4,
+      "name": "Двері західного коридору",
+      "type": "exit"
+    },
+    {
+      "id": 90,
+      "floor": 0,
+      "x": 175,
+      "y": 110,
+      "snap_radius": 8,
+      "name": "Західний туалет",
+      "type": "room"
+    },
+    {
+      "id": 91,
+      "floor": 0,
+      "x": 190,
+      "y": 106,
+      "snap_radius": 2,
+      "name": "Двері західного туалету",
+      "type": "exit"
+    },
+    {
+      "id": 92,
+      "floor": 0,
+      "x": 198,
+      "y": 125,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 113 і 115",
+      "type": "junction"
+    },
+    {
+      "id": 93,
+      "floor": 0,
+      "x": 168,
+      "y": 136,
+      "snap_radius": 13,
+      "name": "Аудиторія 113",
+      "type": "room"
+    },
+    {
+      "id": 94,
+      "floor": 0,
+      "x": 198,
+      "y": 133,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 115",
+      "type": "exit"
+    },
+    {
+      "id": 95,
+      "floor": 0,
+      "x": 190,
+      "y": 125,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 113",
+      "type": "exit"
+    },
+    {
+      "id": 96,
+      "floor": 0,
+      "x": 171,
+      "y": 156,
+      "snap_radius": 2,
+      "name": "Двері між аудиторіями 114 і 113",
+      "type": "exit"
+    },
+    {
+      "id": 97,
+      "floor": 0,
+      "x": 190,
+      "y": 165,
+      "snap_radius": 2,
+      "name": "Двері між аудиторіями 114 і 115",
+      "type": "exit"
+    },
+    {
+      "id": 98,
+      "floor": 0,
+      "x": 170,
+      "y": 62,
+      "snap_radius": 2,
+      "name": "Двері між аудиторіями 108а і 108",
+      "type": "exit"
+    },
+    {
+      "id": 99,
+      "floor": 0,
+      "x": 192,
+      "y": 56,
+      "snap_radius": 18,
+      "name": "Аудиторія 108",
+      "type": "room"
+    },
+    {
+      "id": 100,
+      "floor": 0,
+      "x": 141,
+      "y": 60,
+      "snap_radius": 2,
+      "name": "Двері між аудиторіями 108б і 108а",
+      "type": "exit"
+    },
+    {
+      "id": 101,
+      "floor": 0,
+      "x": 93,
+      "y": 60,
+      "snap_radius": 12,
+      "name": "Коридор до чорного виходу",
+      "type": "corridor"
+    },
+    {
+      "id": 102,
+      "floor": 0,
+      "x": 52,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 68",
+      "type": "exit"
+    },
+    {
+      "id": 103,
+      "floor": 0,
+      "x": 52,
+      "y": 124,
+      "snap_radius": 16,
+      "name": "Західні аудиторії",
+      "type": "room"
+    },
+    {
+      "id": 104,
+      "floor": 0,
+      "x": 52,
+      "y": 102,
+      "snap_radius": 2,
+      "name": "Двері західних аудиторій",
+      "type": "exit"
+    },
+    {
+      "id": 105,
+      "floor": 0,
+      "x": 93,
+      "y": 20,
+      "snap_radius": 4,
+      "name": "Чорний вихід",
+      "type": "exit"
+    },
+    {
+      "id": 106,
+      "floor": 1,
+      "x": 488,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя біля східних сходів",
+      "type": "junction"
+    },
+    {
+      "id": 107,
+      "floor": 1,
+      "x": 475,
+      "y": 130,
+      "snap_radius": 15,
+      "name": "Головні сходи",
+      "type": "stairs"
+    },
+    {
+      "id": 108,
+      "floor": 1,
+      "x": 508,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 200 та актової зали",
+      "type": "junction"
+    },
+    {
+      "id": 109,
+      "floor": 1,
+      "x": 508,
+      "y": 98,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 200",
+      "type": "exit"
+    },
+    {
+      "id": 110,
+      "floor": 1,
+      "x": 508,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Східні двері актової зали",
+      "type": "exit"
+    },
+    {
+      "id": 111,
+      "floor": 1,
+      "x": 516,
+      "y": 120,
+      "snap_radius": 16,
+      "name": "Аудиторія 200",
+      "type": "room"
+    },
+    {
+      "id": 112,
+      "floor": 1,
+      "x": 470,
+      "y": 42,
+      "snap_radius": 38,
+      "name": "Актова зала 217",
+      "type": "room"
+    },
+    {
+      "id": 113,
+      "floor": 1,
+      "x": 555,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 201 і 216",
+      "type": "junction"
+    },
+    {
+      "id": 114,
+      "floor": 1,
+      "x": 555,
+      "y": 98,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 201",
+      "type": "exit"
+    },
+    {
+      "id": 115,
+      "floor": 1,
+      "x": 555,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 216",
+      "type": "exit"
+    },
+    {
+      "id": 116,
+      "floor": 1,
+      "x": 557,
+      "y": 120,
+      "snap_radius": 16,
+      "name": "Аудиторія 201",
+      "type": "room"
+    },
+    {
+      "id": 117,
+      "floor": 1,
+      "x": 548,
+      "y": 45,
+      "snap_radius": 18,
+      "name": "Аудиторія 216",
+      "type": "room"
+    },
+    {
+      "id": 118,
+      "floor": 1,
+      "x": 606,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 215",
+      "type": "junction"
+    },
+    {
+      "id": 119,
+      "floor": 1,
+      "x": 606,
+      "y": 80,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 215",
+      "type": "exit"
+    },
+    {
+      "id": 120,
+      "floor": 1,
+      "x": 600,
+      "y": 54,
+      "snap_radius": 12,
+      "name": "Аудиторія 215",
+      "type": "room"
+    },
+    {
+      "id": 121,
+      "floor": 1,
+      "x": 630,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 214 і 211",
+      "type": "junction"
+    },
+    {
+      "id": 122,
+      "floor": 1,
+      "x": 630,
+      "y": 80,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 214",
+      "type": "exit"
+    },
+    {
+      "id": 123,
+      "floor": 1,
+      "x": 630,
+      "y": 54,
+      "snap_radius": 12,
+      "name": "Аудиторія 214",
+      "type": "room"
+    },
+    {
+      "id": 125,
+      "floor": 1,
+      "x": 659,
+      "y": 80,
+      "snap_radius": 2,
+      "name": "Двері між аудиторіями 211 і 213",
+      "type": "exit"
+    },
+    {
+      "id": 126,
+      "floor": 1,
+      "x": 654,
+      "y": 50,
+      "snap_radius": 11,
+      "name": "Аудиторія 213",
+      "type": "room"
+    },
+    {
+      "id": 128,
+      "floor": 1,
+      "x": 672,
+      "y": 80,
+      "snap_radius": 2,
+      "name": "Двері між аудиторіями 211 і 212",
+      "type": "exit"
+    },
+    {
+      "id": 129,
+      "floor": 1,
+      "x": 638,
+      "y": 90,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 211",
+      "type": "exit"
+    },
+    {
+      "id": 130,
+      "floor": 1,
+      "x": 678,
+      "y": 50,
+      "snap_radius": 12,
+      "name": "Аудиторія 212",
+      "type": "room"
+    },
+    {
+      "id": 131,
+      "floor": 1,
+      "x": 660,
+      "y": 90,
+      "snap_radius": 8,
+      "name": "Аудиторія 211",
+      "type": "room"
+    },
+    {
+      "id": 132,
+      "floor": 1,
+      "x": 381,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 235 і 218",
+      "type": "junction"
+    },
+    {
+      "id": 133,
+      "floor": 1,
+      "x": 381,
+      "y": 98,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 235",
+      "type": "exit"
+    },
+    {
+      "id": 134,
+      "floor": 1,
+      "x": 384,
+      "y": 120,
+      "snap_radius": 12,
+      "name": "Аудиторія 235",
+      "type": "room"
+    },
+    {
+      "id": 135,
+      "floor": 1,
+      "x": 345,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 219 і 234",
+      "type": "junction"
+    },
+    {
+      "id": 137,
+      "floor": 1,
+      "x": 345,
+      "y": 98,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 234",
+      "type": "exit"
+    },
+    {
+      "id": 139,
+      "floor": 1,
+      "x": 340,
+      "y": 126,
+      "snap_radius": 15,
+      "name": "Аудиторія 234",
+      "type": "room"
+    },
+    {
+      "id": 140,
+      "floor": 1,
+      "x": 318,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 220",
+      "type": "junction"
+    },
+    {
+      "id": 141,
+      "floor": 1,
+      "x": 342,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 219",
+      "type": "exit"
+    },
+    {
+      "id": 143,
+      "floor": 1,
+      "x": 342,
+      "y": 55,
+      "snap_radius": 10,
+      "name": "Аудиторія 219",
+      "type": "room"
+    },
+    {
+      "id": 144,
+      "floor": 1,
+      "x": 282,
+      "y": 120,
+      "snap_radius": 20,
+      "name": "Аудиторія 233",
+      "type": "room"
+    },
+    {
+      "id": 145,
+      "floor": 1,
+      "x": 267,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 221 і 223",
+      "type": "junction"
+    },
+    {
+      "id": 146,
+      "floor": 1,
+      "x": 318,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 220",
+      "type": "exit"
+    },
+    {
+      "id": 147,
+      "floor": 1,
+      "x": 318,
+      "y": 54,
+      "snap_radius": 10,
+      "name": "Аудиторія 220",
+      "type": "room"
+    },
+    {
+      "id": 151,
+      "floor": 1,
+      "x": 277,
+      "y": 58,
+      "snap_radius": 18,
+      "name": "Аудиторія 221",
+      "type": "room"
+    },
+    {
+      "id": 153,
+      "floor": 1,
+      "x": 207,
+      "y": 86,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 222 і 232",
+      "type": "junction"
+    },
+    {
+      "id": 154,
+      "floor": 1,
+      "x": 207,
+      "y": 78,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 222",
+      "type": "exit"
+    },
+    {
+      "id": 155,
+      "floor": 1,
+      "x": 207,
+      "y": 94,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 232",
+      "type": "exit"
+    },
+    {
+      "id": 156,
+      "floor": 1,
+      "x": 216,
+      "y": 50,
+      "snap_radius": 16,
+      "name": "Аудиторія 222",
+      "type": "room"
+    },
+    {
+      "id": 157,
+      "floor": 1,
+      "x": 225,
+      "y": 120,
+      "snap_radius": 20,
+      "name": "Аудиторія 232",
+      "type": "room"
+    },
+    {
+      "id": 158,
+      "floor": 1,
+      "x": 190,
+      "y": 86,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 223",
+      "type": "junction"
+    },
+    {
+      "id": 161,
+      "floor": 1,
+      "x": 190,
+      "y": 78,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 223",
+      "type": "exit"
+    },
+    {
+      "id": 164,
+      "floor": 1,
+      "x": 190,
+      "y": 50,
+      "snap_radius": 8,
+      "name": "Аудиторія 223",
+      "type": "room"
+    },
+    {
+      "id": 165,
+      "floor": 1,
+      "x": 152,
+      "y": 110,
+      "snap_radius": 12,
+      "name": "Аудиторія 229",
+      "type": "room"
+    },
+    {
+      "id": 166,
+      "floor": 1,
+      "x": 154,
+      "y": 138,
+      "snap_radius": 13,
+      "name": "Аудиторія 230",
+      "type": "room"
+    },
+    {
+      "id": 167,
+      "floor": 1,
+      "x": 146,
+      "y": 86,
+      "snap_radius": 6,
+      "name": "Перехрестя між аудиторіями 224 і 229",
+      "type": "junction"
+    },
+    {
+      "id": 168,
+      "floor": 1,
+      "x": 146,
+      "y": 78,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 224",
+      "type": "exit"
+    },
+    {
+      "id": 169,
+      "floor": 1,
+      "x": 147,
+      "y": 94,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 229 до коридору",
+      "type": "exit"
+    },
+    {
+      "id": 170,
+      "floor": 1,
+      "x": 152,
+      "y": 50,
+      "snap_radius": 14,
+      "name": "Аудиторія 224",
+      "type": "room"
+    },
+    {
+      "id": 171,
+      "floor": 1,
+      "x": 156,
+      "y": 174,
+      "snap_radius": 16,
+      "name": "Аудиторія 231",
+      "type": "room"
+    },
+    {
+      "id": 172,
+      "floor": 1,
+      "x": 115,
+      "y": 86,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 225",
+      "type": "junction"
+    },
+    {
+      "id": 173,
+      "floor": 1,
+      "x": 115,
+      "y": 78,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 225",
+      "type": "exit"
+    },
+    {
+      "id": 174,
+      "floor": 1,
+      "x": 117,
+      "y": 50,
+      "snap_radius": 12,
+      "name": "Аудиторія 225",
+      "type": "room"
+    },
+    {
+      "id": 175,
+      "floor": 1,
+      "x": 72,
+      "y": 86,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 226",
+      "type": "junction"
+    },
+    {
+      "id": 176,
+      "floor": 1,
+      "x": 72,
+      "y": 78,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 226",
+      "type": "exit"
+    },
+    {
+      "id": 177,
+      "floor": 1,
+      "x": 88,
+      "y": 50,
+      "snap_radius": 14,
+      "name": "Аудиторія 226",
+      "type": "room"
+    },
+    {
+      "id": 178,
+      "floor": 1,
+      "x": 50,
+      "y": 86,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 227 та західних сходів",
+      "type": "junction"
+    },
+    {
+      "id": 179,
+      "floor": 1,
+      "x": 50,
+      "y": 76,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 227",
+      "type": "exit"
+    },
+    {
+      "id": 180,
+      "floor": 1,
+      "x": 24,
+      "y": 94,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 228",
+      "type": "exit"
+    },
+    {
+      "id": 181,
+      "floor": 1,
+      "x": 40,
+      "y": 50,
+      "snap_radius": 17,
+      "name": "Аудиторія 227",
+      "type": "room"
+    },
+    {
+      "id": 182,
+      "floor": 1,
+      "x": 25,
+      "y": 120,
+      "snap_radius": 8,
+      "name": "Аудиторія 228",
+      "type": "room"
+    },
+    {
+      "id": 183,
+      "floor": 1,
+      "x": 50,
+      "y": 120,
+      "snap_radius": 16,
+      "name": "Західні сходи",
+      "type": "stairs"
+    },
+    {
+      "id": 184,
+      "floor": 1,
+      "x": 431,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя біля туалету та актової зали",
+      "type": "junction"
+    },
+    {
+      "id": 185,
+      "floor": 1,
+      "x": 431,
+      "y": 98,
+      "snap_radius": 2,
+      "name": "Двері жіночого туалету",
+      "type": "exit"
+    },
+    {
+      "id": 186,
+      "floor": 1,
+      "x": 431,
+      "y": 120,
+      "snap_radius": 10,
+      "name": "Жіночий туалет",
+      "type": "room"
+    },
+    {
+      "id": 187,
+      "floor": 1,
+      "x": 453,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя біля західних сходів",
+      "type": "junction"
+    },
+    {
+      "id": 188,
+      "floor": 1,
+      "x": 469,
+      "y": 90,
+      "snap_radius": 6,
+      "name": "Перехрестя коридору біля актової зали",
+      "type": "junction"
+    },
+    {
+      "id": 189,
+      "floor": 1,
+      "x": 469,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Центральні двері актової зали",
+      "type": "exit"
+    },
+    {
+      "id": 190,
+      "floor": 1,
+      "x": 431,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Західні двері актової зали",
+      "type": "exit"
+    },
+    {
+      "id": 191,
+      "floor": 1,
+      "x": 388,
+      "y": 55,
+      "snap_radius": 20,
+      "name": "Аудиторія 218",
+      "type": "room"
+    },
+    {
+      "id": 192,
+      "floor": 1,
+      "x": 381,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 218",
+      "type": "exit"
+    },
+    {
+      "id": 193,
+      "floor": 1,
+      "x": 267,
+      "y": 98,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 233",
+      "type": "exit"
+    },
+    {
+      "id": 194,
+      "floor": 1,
+      "x": 267,
+      "y": 82,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 221",
+      "type": "exit"
+    },
+    {
+      "id": 195,
+      "floor": 1,
+      "x": 246,
+      "y": 88,
+      "snap_radius": 4,
+      "name": "Вузький коридор",
+      "type": "corridor"
+    },
+    {
+      "id": 196,
+      "floor": 1,
+      "x": 188,
+      "y": 110,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 229",
+      "type": "junction"
+    },
+    {
+      "id": 197,
+      "floor": 1,
+      "x": 175,
+      "y": 108,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 229",
+      "type": "exit"
+    },
+    {
+      "id": 198,
+      "floor": 1,
+      "x": 188,
+      "y": 126,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 230",
+      "type": "junction"
+    },
+    {
+      "id": 199,
+      "floor": 1,
+      "x": 188,
+      "y": 160,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 231",
+      "type": "junction"
+    },
+    {
+      "id": 200,
+      "floor": 1,
+      "x": 175,
+      "y": 130,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 230",
+      "type": "exit"
+    },
+    {
+      "id": 201,
+      "floor": 1,
+      "x": 176,
+      "y": 162,
+      "snap_radius": 2,
+      "name": "Двері аудиторії 231",
+      "type": "exit"
+    },
+    {
+      "id": 202,
+      "floor": 1,
+      "x": 24,
+      "y": 86,
+      "snap_radius": 6,
+      "name": "Перехрестя біля аудиторії 228",
+      "type": "junction"
+    }
+  ],
+  "edges": [
+    {
+      "id": 0,
+      "source": 0,
+      "target": 1,
+      "cost": 28,
+      "reverse_cost": 28,
+      "corridor_width": 10
+    },
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 10
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "cost": 17,
+      "reverse_cost": 17,
+      "corridor_width": 10
+    },
+    {
+      "id": 3,
+      "source": 4,
+      "target": 5,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 6,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 5,
+      "source": 2,
+      "target": 4,
+      "cost": 22,
+      "reverse_cost": 22,
+      "corridor_width": 12
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 8,
+      "cost": 10,
+      "reverse_cost": 10,
+      "corridor_width": 4
+    },
+    {
+      "id": 7,
+      "source": 4,
+      "target": 7,
+      "cost": 25,
+      "reverse_cost": 25,
+      "corridor_width": 12
+    },
+    {
+      "id": 8,
+      "source": 6,
+      "target": 10,
+      "cost": 7,
+      "reverse_cost": 7,
+      "corridor_width": 4
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 11,
+      "cost": 7,
+      "reverse_cost": 7,
+      "corridor_width": 4
+    },
+    {
+      "id": 10,
+      "source": 13,
+      "target": 15,
+      "cost": 2.763,
+      "reverse_cost": 2.763,
+      "corridor_width": 4
+    },
+    {
+      "id": 11,
+      "source": 14,
+      "target": 16,
+      "cost": 7.416,
+      "reverse_cost": 7.416,
+      "corridor_width": 4
+    },
+    {
+      "id": 12,
+      "source": 7,
+      "target": 12,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 10
+    },
+    {
+      "id": 13,
+      "source": 7,
+      "target": 9,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 14,
+      "source": 12,
+      "target": 13,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 15,
+      "source": 12,
+      "target": 14,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 16,
+      "source": 12,
+      "target": 17,
+      "cost": 27,
+      "reverse_cost": 27,
+      "corridor_width": 10
+    },
+    {
+      "id": 17,
+      "source": 22,
+      "target": 27,
+      "cost": 32,
+      "reverse_cost": 32,
+      "corridor_width": 10
+    },
+    {
+      "id": 18,
+      "source": 37,
+      "target": 42,
+      "cost": 31,
+      "reverse_cost": 31,
+      "corridor_width": 10
+    },
+    {
+      "id": 19,
+      "source": 42,
+      "target": 45,
+      "cost": 31,
+      "reverse_cost": 31,
+      "corridor_width": 10
+    },
+    {
+      "id": 20,
+      "source": 45,
+      "target": 52,
+      "cost": 7,
+      "reverse_cost": 7,
+      "corridor_width": 10
+    },
+    {
+      "id": 21,
+      "source": 52,
+      "target": 56,
+      "cost": 27,
+      "reverse_cost": 27,
+      "corridor_width": 12
+    },
+    {
+      "id": 22,
+      "source": 17,
+      "target": 18,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 23,
+      "source": 18,
+      "target": 20,
+      "cost": 4.682,
+      "reverse_cost": 4.682,
+      "corridor_width": 4
+    },
+    {
+      "id": 24,
+      "source": 17,
+      "target": 19,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 25,
+      "source": 19,
+      "target": 21,
+      "cost": 16.284,
+      "reverse_cost": 16.284,
+      "corridor_width": 4
+    },
+    {
+      "id": 26,
+      "source": 22,
+      "target": 23,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 27,
+      "source": 23,
+      "target": 25,
+      "cost": 5.313,
+      "reverse_cost": 5.313,
+      "corridor_width": 4
+    },
+    {
+      "id": 28,
+      "source": 22,
+      "target": 24,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 29,
+      "source": 24,
+      "target": 26,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 4
+    },
+    {
+      "id": 30,
+      "source": 27,
+      "target": 28,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 31,
+      "source": 28,
+      "target": 30,
+      "cost": 0.439,
+      "reverse_cost": 0.439,
+      "corridor_width": 4
+    },
+    {
+      "id": 32,
+      "source": 32,
+      "target": 33,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 33,
+      "source": 33,
+      "target": 35,
+      "cost": 9.732,
+      "reverse_cost": 9.732,
+      "corridor_width": 4
+    },
+    {
+      "id": 34,
+      "source": 32,
+      "target": 34,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 35,
+      "source": 34,
+      "target": 36,
+      "cost": 10.284,
+      "reverse_cost": 10.284,
+      "corridor_width": 4
+    },
+    {
+      "id": 36,
+      "source": 42,
+      "target": 43,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 37,
+      "source": 43,
+      "target": 44,
+      "cost": 14,
+      "reverse_cost": 14,
+      "corridor_width": 4
+    },
+    {
+      "id": 38,
+      "source": 45,
+      "target": 46,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 39,
+      "source": 46,
+      "target": 49,
+      "cost": 16.44,
+      "reverse_cost": 16.44,
+      "corridor_width": 4
+    },
+    {
+      "id": 40,
+      "source": 52,
+      "target": 55,
+      "cost": 14,
+      "reverse_cost": 14,
+      "corridor_width": 8
+    },
+    {
+      "id": 41,
+      "source": 82,
+      "target": 83,
+      "cost": 10,
+      "reverse_cost": 10,
+      "corridor_width": 3
+    },
+    {
+      "id": 42,
+      "source": 2,
+      "target": 57,
+      "cost": 25,
+      "reverse_cost": 25,
+      "corridor_width": 10
+    },
+    {
+      "id": 43,
+      "source": 57,
+      "target": 60,
+      "cost": 18,
+      "reverse_cost": 18,
+      "corridor_width": 10
+    },
+    {
+      "id": 44,
+      "source": 60,
+      "target": 63,
+      "cost": 17,
+      "reverse_cost": 17,
+      "corridor_width": 10
+    },
+    {
+      "id": 45,
+      "source": 63,
+      "target": 68,
+      "cost": 15,
+      "reverse_cost": 15,
+      "corridor_width": 10
+    },
+    {
+      "id": 46,
+      "source": 76,
+      "target": 73,
+      "cost": 31,
+      "reverse_cost": 31,
+      "corridor_width": 10
+    },
+    {
+      "id": 47,
+      "source": 57,
+      "target": 58,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 48,
+      "source": 58,
+      "target": 59,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 4
+    },
+    {
+      "id": 49,
+      "source": 60,
+      "target": 61,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 50,
+      "source": 61,
+      "target": 62,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 4
+    },
+    {
+      "id": 51,
+      "source": 63,
+      "target": 64,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 52,
+      "source": 64,
+      "target": 66,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 4
+    },
+    {
+      "id": 53,
+      "source": 63,
+      "target": 65,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 54,
+      "source": 68,
+      "target": 69,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 55,
+      "source": 69,
+      "target": 71,
+      "cost": 12,
+      "reverse_cost": 12,
+      "corridor_width": 4
+    },
+    {
+      "id": 56,
+      "source": 70,
+      "target": 72,
+      "cost": 7.659,
+      "reverse_cost": 7.659,
+      "corridor_width": 4
+    },
+    {
+      "id": 57,
+      "source": 73,
+      "target": 74,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 58,
+      "source": 74,
+      "target": 75,
+      "cost": 5,
+      "reverse_cost": 5,
+      "corridor_width": 4
+    },
+    {
+      "id": 59,
+      "source": 76,
+      "target": 77,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 60,
+      "source": 77,
+      "target": 78,
+      "cost": 2.036,
+      "reverse_cost": 2.036,
+      "corridor_width": 4
+    },
+    {
+      "id": 61,
+      "source": 65,
+      "target": 85,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 62,
+      "source": 85,
+      "target": 67,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 10
+    },
+    {
+      "id": 63,
+      "source": 83,
+      "target": 85,
+      "cost": 28,
+      "reverse_cost": 28,
+      "corridor_width": 8
+    },
+    {
+      "id": 64,
+      "source": 82,
+      "target": 84,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 10
+    },
+    {
+      "id": 65,
+      "source": 70,
+      "target": 86,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 5
+    },
+    {
+      "id": 66,
+      "source": 68,
+      "target": 86,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 10
+    },
+    {
+      "id": 67,
+      "source": 76,
+      "target": 86,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 10
+    },
+    {
+      "id": 68,
+      "source": 78,
+      "target": 81,
+      "cost": 24.381,
+      "reverse_cost": 24.381,
+      "corridor_width": 10
+    },
+    {
+      "id": 69,
+      "source": 78,
+      "target": 87,
+      "cost": 2.515,
+      "reverse_cost": 2.515,
+      "corridor_width": 10
+    },
+    {
+      "id": 70,
+      "source": 22,
+      "target": 17,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 10
+    },
+    {
+      "id": 71,
+      "source": 26,
+      "target": 31,
+      "cost": 15,
+      "reverse_cost": 15,
+      "corridor_width": 20
+    },
+    {
+      "id": 72,
+      "source": 88,
+      "target": 27,
+      "cost": 24,
+      "reverse_cost": 24,
+      "corridor_width": 10
+    },
+    {
+      "id": 73,
+      "source": 32,
+      "target": 88,
+      "cost": 19,
+      "reverse_cost": 19,
+      "corridor_width": 10
+    },
+    {
+      "id": 74,
+      "source": 89,
+      "target": 32,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 10
+    },
+    {
+      "id": 75,
+      "source": 37,
+      "target": 89,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 10
+    },
+    {
+      "id": 76,
+      "source": 37,
+      "target": 41,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 10
+    },
+    {
+      "id": 77,
+      "source": 41,
+      "target": 91,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 4
+    },
+    {
+      "id": 78,
+      "source": 91,
+      "target": 90,
+      "cost": 5.524,
+      "reverse_cost": 5.524,
+      "corridor_width": 10
+    },
+    {
+      "id": 79,
+      "source": 94,
+      "target": 92,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 4
+    },
+    {
+      "id": 80,
+      "source": 94,
+      "target": 51,
+      "cost": 9,
+      "reverse_cost": 9,
+      "corridor_width": 10
+    },
+    {
+      "id": 81,
+      "source": 41,
+      "target": 92,
+      "cost": 7,
+      "reverse_cost": 7,
+      "corridor_width": 10
+    },
+    {
+      "id": 82,
+      "source": 95,
+      "target": 93,
+      "cost": 9.597,
+      "reverse_cost": 9.597,
+      "corridor_width": 10
+    },
+    {
+      "id": 83,
+      "source": 93,
+      "target": 96,
+      "cost": 5.224,
+      "reverse_cost": 5.224,
+      "corridor_width": 10
+    },
+    {
+      "id": 84,
+      "source": 96,
+      "target": 50,
+      "cost": 5.235,
+      "reverse_cost": 5.235,
+      "corridor_width": 10
+    },
+    {
+      "id": 85,
+      "source": 51,
+      "target": 97,
+      "cost": 9,
+      "reverse_cost": 9,
+      "corridor_width": 10
+    },
+    {
+      "id": 86,
+      "source": 97,
+      "target": 50,
+      "cost": 10.166,
+      "reverse_cost": 10.166,
+      "corridor_width": 10
+    },
+    {
+      "id": 87,
+      "source": 44,
+      "target": 98,
+      "cost": 2.155,
+      "reverse_cost": 2.155,
+      "corridor_width": 10
+    },
+    {
+      "id": 88,
+      "source": 98,
+      "target": 99,
+      "cost": 2.804,
+      "reverse_cost": 2.804,
+      "corridor_width": 10
+    },
+    {
+      "id": 89,
+      "source": 49,
+      "target": 100,
+      "cost": 2.471,
+      "reverse_cost": 2.471,
+      "corridor_width": 10
+    },
+    {
+      "id": 90,
+      "source": 100,
+      "target": 44,
+      "cost": 0.56,
+      "reverse_cost": 0.56,
+      "corridor_width": 10
+    },
+    {
+      "id": 91,
+      "source": 52,
+      "target": 101,
+      "cost": 14,
+      "reverse_cost": 14,
+      "corridor_width": 10
+    },
+    {
+      "id": 92,
+      "source": 102,
+      "target": 56,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 2
+    },
+    {
+      "id": 93,
+      "source": 102,
+      "target": 54,
+      "cost": 8.857,
+      "reverse_cost": 8.857,
+      "corridor_width": 10
+    },
+    {
+      "id": 94,
+      "source": 104,
+      "target": 103,
+      "cost": 4,
+      "reverse_cost": 4,
+      "corridor_width": 10
+    },
+    {
+      "id": 95,
+      "source": 101,
+      "target": 105,
+      "cost": 24,
+      "reverse_cost": 24,
+      "corridor_width": 10
+    },
+    {
+      "id": 96,
+      "source": 107,
+      "target": 106,
+      "cost": 19,
+      "reverse_cost": 19,
+      "corridor_width": 10
+    },
+    {
+      "id": 97,
+      "source": 132,
+      "target": 135,
+      "cost": 20,
+      "reverse_cost": 20,
+      "corridor_width": 10
+    },
+    {
+      "id": 98,
+      "source": 135,
+      "target": 140,
+      "cost": 22,
+      "reverse_cost": 22,
+      "corridor_width": 10
+    },
+    {
+      "id": 99,
+      "source": 140,
+      "target": 145,
+      "cost": 14,
+      "reverse_cost": 14,
+      "corridor_width": 10
+    },
+    {
+      "id": 100,
+      "source": 153,
+      "target": 158,
+      "cost": 28,
+      "reverse_cost": 28,
+      "corridor_width": 10
+    },
+    {
+      "id": 101,
+      "source": 167,
+      "target": 172,
+      "cost": 10,
+      "reverse_cost": 10,
+      "corridor_width": 10
+    },
+    {
+      "id": 102,
+      "source": 172,
+      "target": 175,
+      "cost": 16,
+      "reverse_cost": 16,
+      "corridor_width": 10
+    },
+    {
+      "id": 103,
+      "source": 175,
+      "target": 178,
+      "cost": 26,
+      "reverse_cost": 26,
+      "corridor_width": 10
+    },
+    {
+      "id": 104,
+      "source": 178,
+      "target": 183,
+      "cost": 5,
+      "reverse_cost": 5,
+      "corridor_width": 10
+    },
+    {
+      "id": 105,
+      "source": 113,
+      "target": 118,
+      "cost": 36,
+      "reverse_cost": 36,
+      "corridor_width": 10
+    },
+    {
+      "id": 106,
+      "source": 118,
+      "target": 121,
+      "cost": 12,
+      "reverse_cost": 12,
+      "corridor_width": 10
+    },
+    {
+      "id": 107,
+      "source": 108,
+      "target": 109,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 108,
+      "source": 108,
+      "target": 110,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 109,
+      "source": 110,
+      "target": 112,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 110,
+      "source": 113,
+      "target": 114,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 111,
+      "source": 114,
+      "target": 116,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 4
+    },
+    {
+      "id": 112,
+      "source": 113,
+      "target": 115,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 113,
+      "source": 115,
+      "target": 117,
+      "cost": 15.9,
+      "reverse_cost": 15.9,
+      "corridor_width": 4
+    },
+    {
+      "id": 114,
+      "source": 118,
+      "target": 119,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 115,
+      "source": 119,
+      "target": 120,
+      "cost": 22,
+      "reverse_cost": 22,
+      "corridor_width": 4
+    },
+    {
+      "id": 116,
+      "source": 121,
+      "target": 122,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 117,
+      "source": 122,
+      "target": 123,
+      "cost": 22,
+      "reverse_cost": 22,
+      "corridor_width": 4
+    },
+    {
+      "id": 118,
+      "source": 128,
+      "target": 130,
+      "cost": 20,
+      "reverse_cost": 20,
+      "corridor_width": 4
+    },
+    {
+      "id": 119,
+      "source": 132,
+      "target": 133,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 120,
+      "source": 133,
+      "target": 134,
+      "cost": 11,
+      "reverse_cost": 11,
+      "corridor_width": 4
+    },
+    {
+      "id": 121,
+      "source": 132,
+      "target": 184,
+      "cost": 26,
+      "reverse_cost": 26,
+      "corridor_width": 8
+    },
+    {
+      "id": 122,
+      "source": 184,
+      "target": 185,
+      "cost": 4,
+      "reverse_cost": 4,
+      "corridor_width": 3
+    },
+    {
+      "id": 123,
+      "source": 185,
+      "target": 186,
+      "cost": 10,
+      "reverse_cost": 10,
+      "corridor_width": 4
+    },
+    {
+      "id": 124,
+      "source": 135,
+      "target": 137,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 125,
+      "source": 137,
+      "target": 139,
+      "cost": 15.8,
+      "reverse_cost": 15.8,
+      "corridor_width": 4
+    },
+    {
+      "id": 126,
+      "source": 141,
+      "target": 143,
+      "cost": 21,
+      "reverse_cost": 21,
+      "corridor_width": 12
+    },
+    {
+      "id": 127,
+      "source": 146,
+      "target": 147,
+      "cost": 21,
+      "reverse_cost": 21,
+      "corridor_width": 12
+    },
+    {
+      "id": 128,
+      "source": 153,
+      "target": 154,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 129,
+      "source": 154,
+      "target": 156,
+      "cost": 18,
+      "reverse_cost": 18,
+      "corridor_width": 10
+    },
+    {
+      "id": 130,
+      "source": 153,
+      "target": 155,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 131,
+      "source": 155,
+      "target": 157,
+      "cost": 9,
+      "reverse_cost": 9,
+      "corridor_width": 10
+    },
+    {
+      "id": 132,
+      "source": 161,
+      "target": 164,
+      "cost": 19,
+      "reverse_cost": 19,
+      "corridor_width": 10
+    },
+    {
+      "id": 133,
+      "source": 167,
+      "target": 168,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 134,
+      "source": 168,
+      "target": 170,
+      "cost": 23,
+      "reverse_cost": 23,
+      "corridor_width": 10
+    },
+    {
+      "id": 135,
+      "source": 167,
+      "target": 169,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 136,
+      "source": 172,
+      "target": 173,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 137,
+      "source": 173,
+      "target": 174,
+      "cost": 21,
+      "reverse_cost": 21,
+      "corridor_width": 10
+    },
+    {
+      "id": 138,
+      "source": 175,
+      "target": 176,
+      "cost": 2,
+      "reverse_cost": 2,
+      "corridor_width": 3
+    },
+    {
+      "id": 139,
+      "source": 176,
+      "target": 177,
+      "cost": 21,
+      "reverse_cost": 21,
+      "corridor_width": 10
+    },
+    {
+      "id": 140,
+      "source": 178,
+      "target": 179,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 3
+    },
+    {
+      "id": 141,
+      "source": 179,
+      "target": 181,
+      "cost": 16,
+      "reverse_cost": 16,
+      "corridor_width": 10
+    },
+    {
+      "id": 142,
+      "source": 180,
+      "target": 182,
+      "cost": 4,
+      "reverse_cost": 4,
+      "corridor_width": 10
+    },
+    {
+      "id": 143,
+      "source": 187,
+      "target": 107,
+      "cost": 19,
+      "reverse_cost": 19,
+      "corridor_width": 10
+    },
+    {
+      "id": 144,
+      "source": 187,
+      "target": 188,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 10
+    },
+    {
+      "id": 145,
+      "source": 106,
+      "target": 188,
+      "cost": 10,
+      "reverse_cost": 10,
+      "corridor_width": 10
+    },
+    {
+      "id": 146,
+      "source": 189,
+      "target": 188,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 147,
+      "source": 189,
+      "target": 112,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 5
+    },
+    {
+      "id": 148,
+      "source": 106,
+      "target": 108,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 149,
+      "source": 187,
+      "target": 184,
+      "cost": 8,
+      "reverse_cost": 8,
+      "corridor_width": 10
+    },
+    {
+      "id": 150,
+      "source": 190,
+      "target": 112,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 151,
+      "source": 109,
+      "target": 111,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 152,
+      "source": 108,
+      "target": 113,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 153,
+      "source": 129,
+      "target": 131,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 154,
+      "source": 131,
+      "target": 128,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 155,
+      "source": 125,
+      "target": 131,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 156,
+      "source": 126,
+      "target": 125,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 157,
+      "source": 192,
+      "target": 191,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 158,
+      "source": 135,
+      "target": 141,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 159,
+      "source": 146,
+      "target": 140,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 160,
+      "source": 145,
+      "target": 193,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 161,
+      "source": 193,
+      "target": 144,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 162,
+      "source": 194,
+      "target": 151,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 163,
+      "source": 195,
+      "target": 145,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 8
+    },
+    {
+      "id": 164,
+      "source": 153,
+      "target": 195,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 165,
+      "source": 161,
+      "target": 158,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 166,
+      "source": 158,
+      "target": 196,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 6
+    },
+    {
+      "id": 167,
+      "source": 197,
+      "target": 196,
+      "cost": 3,
+      "reverse_cost": 3,
+      "corridor_width": 4
+    },
+    {
+      "id": 168,
+      "source": 165,
+      "target": 197,
+      "cost": 15,
+      "reverse_cost": 15,
+      "corridor_width": 10
+    },
+    {
+      "id": 169,
+      "source": 196,
+      "target": 198,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 170,
+      "source": 199,
+      "target": 198,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 171,
+      "source": 198,
+      "target": 200,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 172,
+      "source": 200,
+      "target": 166,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 12
+    },
+    {
+      "id": 173,
+      "source": 199,
+      "target": 201,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 174,
+      "source": 201,
+      "target": 171,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 10
+    },
+    {
+      "id": 175,
+      "source": 167,
+      "target": 158,
+      "cost": 10,
+      "reverse_cost": 10,
+      "corridor_width": 10
+    },
+    {
+      "id": 176,
+      "source": 169,
+      "target": 165,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 177,
+      "source": 202,
+      "target": 178,
+      "cost": 10,
+      "reverse_cost": 10,
+      "corridor_width": 10
+    },
+    {
+      "id": 178,
+      "source": 202,
+      "target": 180,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 4
+    },
+    {
+      "id": 179,
+      "source": 3,
+      "target": 107,
+      "cost": 0,
+      "reverse_cost": 0,
+      "corridor_width": 30,
+      "metadata": {
+        "type": "stairs_transition",
+        "name": "main_stairs",
+        "from_floor": 0,
+        "to_floor": 1
+      }
+    },
+    {
+      "id": 180,
+      "source": 55,
+      "target": 183,
+      "cost": 15.186,
+      "reverse_cost": 15.186,
+      "corridor_width": 24,
+      "metadata": {
+        "type": "stairs_transition",
+        "name": "west_stairs",
+        "from_floor": 0,
+        "to_floor": 1
+      }
+    },
+    {
+      "id": 181,
+      "source": 121,
+      "target": 129,
+      "cost": 1,
+      "reverse_cost": 1,
+      "corridor_width": 6
+    }
+  ]
+}
